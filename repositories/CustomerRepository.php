@@ -89,7 +89,7 @@ class CustomerRepository {
 
         if($pdo instanceof PDO) {
 
-            $stmt = $pdo->prepare("DELETE FROM APONTAMENTOS WHERE id = :id");
+            $stmt = $pdo->prepare("DELETE FROM customers WHERE id = :id");
             $stmt->bindParam(':id', $this->customer->__get("id"));
         
             return $stmt->execute();
